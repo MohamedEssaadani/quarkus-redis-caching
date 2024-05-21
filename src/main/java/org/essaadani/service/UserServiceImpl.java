@@ -23,8 +23,8 @@ public class UserServiceImpl implements UserService {
 
     private void fillUsers() {
         UserDetailsDTO mohamed = new UserDetailsDTO("Mohamed Es-saadani", "26", "essaadani@gmail.com");
-        UserDetailsDTO youssef = new UserDetailsDTO("Mohamed Es-saadani", "26", "essaadani@gmail.com");
-        UserDetailsDTO abdellah = new UserDetailsDTO("Mohamed Es-saadani", "26", "essaadani@gmail.com");
+        UserDetailsDTO youssef = new UserDetailsDTO("Youssef Youssef", "35", "essaadani@gmail.com");
+        UserDetailsDTO abdellah = new UserDetailsDTO("Abdellah Abdellah", "49", "essaadani@gmail.com");
         //
         usersList.addAll(List.of(youssef, mohamed, abdellah));
     }
@@ -39,8 +39,6 @@ public class UserServiceImpl implements UserService {
                 break;
             }
         }
-
-        user = usersList.stream().filter(i -> i.getEmail().equals(email)).findFirst().get();
         return user;
     }
 
