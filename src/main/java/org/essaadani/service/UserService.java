@@ -11,7 +11,9 @@ public interface UserService {
 
     UserDetailsDTO readOne(String email);
 
-    void create(CreateUserDTO userDTO);
+    void create(UserDetailsDTO userDTO);
 
     void update(UpdateUserDTO userDTO);
+
+    void clearCache();
 }
