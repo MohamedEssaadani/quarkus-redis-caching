@@ -46,9 +46,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @CacheInvalidateAll(cacheName = "users")
-    public void create(UserDetailsDTO userDTO) {
+    public void create(CreateUserDTO userDTO) {
         System.out.println("userdto" + userDTO);
-        usersList.add(userDTO);
+        UserDetailsDTO userDetailsDTO = new UserDetailsDTO(userDTO.getFullName(), userDTO.getAge(), userDTO.getEmail());
+        usersList.add(userDetailsDTO);
     }
 
     @Override

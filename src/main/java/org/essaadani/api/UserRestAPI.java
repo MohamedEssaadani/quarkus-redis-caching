@@ -16,7 +16,7 @@ public class UserRestAPI {
 
     @POST
     @Consumes("application/json")
-    public Response createUser(UserDetailsDTO userDTO) {
+    public Response createUser(CreateUserDTO userDTO) {
         System.out.println(userDTO);
         userService.create(userDTO);
         return Response.status(Response.Status.CREATED).build();
